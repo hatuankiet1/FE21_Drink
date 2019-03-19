@@ -1,0 +1,29 @@
+menu.clearfix
+		.container
+			.row
+				.col-lg-2.menu-left
+					img(src='../img/logo.png' alt='logo')
+
+				.col-lg-10.menu-right
+					ul.menu-right-dropdown
+						li
+							a(href='#') TRANG CHỦ
+						li.dropdown
+							a(href="#") RƯỢU VANG ĐỎ
+							div.menu-dropdown
+								i.fas.fa-caret-up
+								-for( var i =0 ; i < 3;i++ )			
+									.menu-item
+										h3 RƯỢU NGOẠI
+										ul.sub_item
+											-var array=['Rượu Chivas','Hàng độc - Rượu độc đáo', 'Johnnie Walker','Rượu Whisky','Rượu Remy Martin','Rượu Glenmorangie']
+											each value in array
+												li
+													a(href="#")= value
+												
+								.image_menu
+									img(src='../img/menu-info.jpg' alt='').
+
+						each value in ["Rượu Vang trắng","champagne","thông tin","blog","liên hệ"]
+							li
+								a=value

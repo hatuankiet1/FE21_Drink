@@ -1,0 +1,84 @@
+doctype html
+html
+	include include/head.pug
+	link(rel='stylesheet' type='text/css' href='../css/home.css')
+	body
+		include mixin/mixin_footer.pug
+		include variables/variable.pug
+
+		header.clearfix
+			include include/account.pug
+
+			.header_banner
+				img(src="../img/banner.png")
+
+		
+		include include/menu.pug
+
+		main
+			.introduce
+				.row
+					.col-lg-3.introduce_left_img
+						img(src='../img/adv-left.png')
+					.col-lg-6.introduce_middle
+						h3 Giới Thiệu
+						img(src='../img/title-dark.png')
+						p #{paragraph}
+						a(href="#") Xem Thêm	
+
+					.col-lg-3.introduce_right_img
+						img(src='../img/adv-right.png')
+			.adv.clearfix
+				.container
+					.img_adv
+						img(src='../img/adv-img.jpg')
+						.adv_item
+							.adv_item_in
+								.col-lg-6.adv_item_in_left
+									-for(var i =0;i < adv.length;i++)
+										img(class=adv[i]["class"] src=adv[i]["src"]).
+										
+								.col-lg-5.col-lg-offset-1
+									+title(true)
+					
+			+product_adv("SẢN PHẨM MỚI")
+									
+			.product.clearfix
+				.row
+					each value in product_adv
+						.col-md-3.parent
+							img(src=value)
+							p 1987
+							h1 RƯỢU
+
+
+			+product_adv("SẢN PHẨM BÁN CHẠY")
+				
+			.news_blog_customer
+				.container
+					.row
+						.col-lg-8
+							+introduce("TIN TỨC & BLOG")
+							each value in news_blog_customer
+								.col-lg-6.news_item
+									img(src= value)
+									h3 VANG THĂNG LONG CLASSIC
+									h6 Đăng bởi HaKiet| 03/18/2019| 60 Bình luận
+									p #{news_paragraph}
+									h5 Readmore 
+
+						.col-lg-4.customer
+							+introduce("TIN TỨC & BLOG")
+							.customer_info
+								i.fas.fa-quote-right.intro
+								p #{news_paragraph}
+								h5 Read more 
+								img(src='../img/avatar.jpg')
+								h3 Kiet HT
+								h6 Graphic design
+								.circle
+									i.fas.fa-circle
+									i.fas.fa-circle
+									i.fas.fa-circle
+
+		include include/footer.pug

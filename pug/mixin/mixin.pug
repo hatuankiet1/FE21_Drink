@@ -1,0 +1,55 @@
+mixin adv_footer(title,li1,li2,li3,li4,li5)
+	h3= title
+	ul
+		each value in [li1,li2,li3,li4,li5]
+			li
+				a(href="#")=value
+
+
+mixin product(src,price_left,price_right)
+	.new_prodct_main_item
+		img(src=src)
+		p RƯỢU VANG ĐÀ LẠT
+		.row
+			.col-lg-3.col-lg-offset-2.price_left=price_left
+				sup đ
+			.col-lg-5.price_right= price_right
+				sup đ
+		a(href="#") ADD TO CART
+
+mixin product_adv(title)
+	.new_product.clearfix
+		.new_product_intro
+			h1= title
+			img(src='../img/title-dark.png')
+		.new_product_main
+			.container
+				-for(var i = 0 ; i <product.length; i++)
+					.col-lg-3
+						+product(product[i]["src"],product[i]["price_left"],product[i]["price_right"])
+
+
+mixin introduce(title)
+	.new_product.clearfix
+		.new_product_intro
+			h1= title
+			img(src='../img/title-dark.png').
+
+
+mixin title(info)
+	.adv_item_in_right
+		h3 RƯỢU NHO NĂM 1987
+		.arrow
+			img(src='../img/titleleft-dark.png')
+		h2 330.000
+			<sup>đ<sup>
+		if info
+			a(href="#") ADD TO CART
+			p #{adv_paragraph}
+			.row_up
+				-for(var i =0;i<row_up.length;i++ )
+					.col-lg-6.row_up_item
+						h1=row_up[i]["h1"]
+						p=row_up[i]["p"]						
+
+

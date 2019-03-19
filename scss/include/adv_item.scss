@@ -1,0 +1,40 @@
+.adv_item_in_right{
+	h2{
+		text-align: left;
+    	padding-left: 20px;
+    	color:$color_orange;
+	}
+	a{
+		display: inline-block;
+	    justify-content: center;
+	    background-color: $color_black;
+	    text-align: center;
+	    margin-top: 16px;
+	    padding-top: 5px;
+	    text-decoration: none;
+	    color:$color_white;
+	    width:112px;
+	    height:31px;
+	    font-size: $font_size_header;
+	    margin-left: -142px;
+	}
+	>p{
+		font-size: $font_size_13;
+		width: 250px;
+	    height: 71px;
+	    text-align: left;
+	    padding-top: 22px;
+	    padding-left: 19px;
+	    color:$color_gray_footer;
+	}
+	.row_up{
+		color:$color_orange;
+		padding-top: 20px;		
+		.row_up_item{
+			border:1px solid $color_orange;
+			h1{
+				line-height: 6px;
+			}
+		}
+	}
+}

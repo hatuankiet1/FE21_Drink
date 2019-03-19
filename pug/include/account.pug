@@ -1,0 +1,13 @@
+.header_nav
+	.container
+		.col-lg-6.header_nav_left
+			ul
+				each value in ["Tài khoản của tôi","Trạng thái đơn hàng","Danh sách ưa thích","Giỏ hàng","Đăng nhập","Đăng ký"]
+					li
+						a(href="#")=value
+
+		.col-lg-3.col-lg-offset-3.header_nav_right
+			form
+				input(type='text' placeholder='Tìm kiêm ở đây...')
+				button(type='submit')
+					i.fas.fa-search

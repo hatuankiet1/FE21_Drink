@@ -1,0 +1,38 @@
+footer.clearfix
+	.container
+		.row.footer_top
+			.col-lg-12
+				.adv
+		.row.footer_middle
+			.col-lg-2
+				+adv_footer("THÔNG TIN","VỀ CHÚNG TÔI","GIAO HÀNG","CẢM NGHĨ","LƯU TRỮ","CHÍNH SÁCH RIÊNG TƯ")
+			.col-lg-2
+				+adv_footer("MUA HÀNG","VẬN CHUYỂN VÀ TRA HÀNG","MUA HÀNG AN TOÀN","VẬN QUỐC TẾ","LIÊN KẾT","DỊCH VỤ GIẢM GIÁ")
+
+			.col-lg-4
+				h3 Gửi Email
+				p Gửi email cho chúng tôi để được hỗ trợ
+				form
+					input(type='text' placeholder='Enter your email')
+					button(type='submit')
+						label Gửi
+				.row.footer_middle_icon
+					each value in ["fab fa-twitter","fab fa-google-plus-g","fas fa-basketball-ball","fab fa-linkedin-in","fas fa-wifi"]
+						a(href="#")
+							i(class=value)
+	
+			.col-lg-4.footer_middle_contact
+				h3 Liên Hệ
+				i.fas.fa-map-marker-alt Tầng 4,Tòa nhà Hanoi Group Số 442 Đội Cấn,P.Cống Vị,Q. Ba Đình,Hà Nội
+
+				each value in ["(04) 6674 2332","(04) 3786 8904","(08) 6680 9686"]
+					i.fas.fa-blender-phone= value
+				i.fas.fa-envelope Support@bizweb.vn
+
+
+		.row.footer_bottom
+			.footer_bottom_left
+				p 
+					|© CoppyRight 2018-2014 DKT Technology JSC
+			.footer_bottom_right
+				img(src='../img/social-pay.png')

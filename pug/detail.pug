@@ -1,0 +1,81 @@
+doctype html
+html
+	include include/head.pug
+	link(rel='stylesheet' type='text/css' href='../css/detail.css')
+	body
+		include mixin/mixin.pug
+		include variables/variable.pug
+
+		header.clearfix
+			include include/account.pug
+
+		include include/menu.pug
+
+		main
+			.container
+				.row.main_top
+					-for(var i=0;i<redirect.length;i++)
+						a(href=redirect[i]["href"])=redirect[i]["name"] +'/'
+				.row.main_middle
+					.col-lg-1
+						.row.list_item
+							i.fas.fa-arrow-up
+							ul
+								each value in list_item_detail
+									li
+										a(href='#')
+											img(src=value).
+
+							i.fas.fa-arrow-down
+
+
+					.col-lg-6
+						.row.item
+							img(src='../img/detail-main.jpg').
+
+					.col-lg-5
+						.row.info
+							+title(false)
+							.star
+								-for(var i=0;i<4;i++)
+									i.fas.fa-star
+								i.fas.fa-star-half-alt
+							.colorful
+								h3 MÀU SẮC
+								each value in color_detail		
+									div(class="color")
+										div(class=value)
+								h3 KÍCH CỠ
+								button(type='button') Loại to
+									i.fas.fa-caret-down.	
+								h3 SỐ LƯỢNG
+								.amount
+									a.in(href="#")
+										i.fas.fa-minus
+									p 
+										|3
+									a.in(href="#")
+										i.fas.fa-plus
+									a.addCart(href="") ADD TO CART
+								.more
+									-for(var i =0;i<more_i.length;i++)	
+										i(class=more_i[i]["class"])=more_i[i]["name"]	
+								h3 MÔ TẢ
+								p #{mota}		
+								img(src='../img/social-link.jpg')
+
+				.row.main_bottom
+					.col-lg-8
+						.row.main_bottom_introduce
+							-for(var i =0;i<detail_info.length;i++)
+								h3(class=detail_info[i]["class"])=detail_info[i]["name"]
+						.row.main_bottom_description
+							p #{detail_description}
+					.col-lg-4
+						.row
+							.main_bottom_image
+								img(src='../img/home-6.jpg')
+								h3 RƯỢU NHO	
+
+
+
