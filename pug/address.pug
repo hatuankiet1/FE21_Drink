@@ -1,0 +1,33 @@
+doctype html
+html
+	include include/head.pug
+	link(rel='stylesheet' type='text/css' href='../css/address.css')
+	body
+		include mixin/mixin.pug
+		include variables/variable.pug
+
+		header.clearfix
+			include include/account.pug
+
+		include include/menu.pug
+
+		main
+			.container
+				+redirect
+				+introduce_arrow("ĐƠN HÀNG")
+				.row
+					.col-md-6
+						p ĐỊA CHỈ CỦA BẠN
+					.col-md-6.address_add
+						a(href="#") Thêm địa chỉ
+				.row
+					-for(var i=0;i<2;i++)
+						+address_form(true,false) 
+				-for(var i=0;i<2;i++)
+					.row
+						.address_field
+							+address_form(false,true)
+												
+
+
+		include include/footer.pug							

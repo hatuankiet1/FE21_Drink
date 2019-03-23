@@ -1,0 +1,27 @@
+$XS:480px;
+$SM:768px;
+$MD:1024px;
+$LG:1200px;
+
+@mixin Responsive($A){
+	if $A == XS{
+		@media screen and (max-width:$XS){
+			@content;
+		}
+	}
+	esle if $A ==SM{
+		@media screen and (max-width:$SM){
+			@content;
+		}
+	}
+	else if $A == MD{
+		@media screen and (max-width:$MD){
+			@content;
+		}
+	}
+	else if $A == LG{
+		@media screen and (max-width:$LG){
+			@content;
+		}
+	}
+}

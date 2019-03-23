@@ -1,0 +1,19 @@
+@import "variables/colors.scss";
+@import "variables/fontSize.scss";
+@import "variables/fontStyle.scss";
+*{
+	font-family: times new roman;
+}
+@import "include/account.scss";
+header .header_nav{
+	position: unset!important;
+}
+@import "include/menu.scss";
+@import "include/introduce_arrow.scss";
+@import "include/footer.scss";
+.product_list{
+	display:flex;
+	flex-direction: row;
+	flex-wrap:wrap;
+}
+@import "include/product_info.scss";

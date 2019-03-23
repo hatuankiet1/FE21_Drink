@@ -1,0 +1,69 @@
+doctype html
+html
+	include include/head.pug
+	link(rel='stylesheet' type='text/css' href='../css/detail_blog.css')
+	body
+		include mixin/mixin.pug
+		include variables/variable.pug
+
+		header.clearfix
+			include include/account.pug
+
+		include include/menu.pug
+
+		main
+			.container
+				+redirect
+				+introduce_arrow("BLOG")
+				.row.detail
+					.col-md-4
+						p BÀI VIẾT MỚI NHẤT
+						each value in detail_blog_item
+							.row.detail_item
+								.col-md-4
+									img(src=value)
+								.col-md-6.detail_item_right
+									p CÁCH SẮP XẾP NỘI THẤT TRONG NHÀ
+									i.far.fa-calendar 16/01/2016
+						p BLOG TAG
+						+keyword
+						p LASTED VIDEO
+						.row
+							img(src='../img/detail-blog-4.jpg')
+
+					.col-md-8
+						.row
+							+detail_product
+						.row.form
+							p ĐÓNG GÓP Ý KIẾN
+							form
+								-for(var i =0 ;i < detail_blog_form.length;i++)
+									.row.field
+										.col-md-2
+											label= detail_blog_form[i]["label"]
+										.col-md-10.col-md-pull-1
+											input(type=detail_blog_form[i]["type"])
+
+								button GỬI Ý KIẾN
+							p.noitalic BÌNH LUẬN(3)
+							-for(var i = 0; i< 3;i++)
+								.row.comment_item
+									.row.comment
+										.col-md-4.comment_left
+											p Bình luận bởi HaKiet
+										.col-md-6.comment_middle
+											p Cách đây 4 giờ
+										.col-md-2.comment_right
+											p Trả lời
+									.row
+										.col-md-12.content
+											p #{detail_blog_comment}
+						.row.pagination
+							.col-md-12
+								i.fas.fa-angle-left
+								-for(var i=1;i<4;i++)
+									a(href="#")=i
+								i.fas.fa-angle-right
+							
+
+		include include/footer.pug							

@@ -1,0 +1,39 @@
+@import "variables/colors.scss";
+@import "variables/fontSize.scss";
+@import "variables/fontStyle.scss";
+*{
+	font-family: times new roman;
+}
+@import "include/account.scss";
+header .header_nav{
+	position: unset!important;
+}
+@import "include/menu.scss";
+@import "include/introduce_arrow.scss";
+@import "include/footer.scss";
+.about{
+	padding-top: 26px;
+	.about_image{
+		img{
+			width:100%;
+		}
+	}
+	.about_content{
+		padding-left: 34px;
+		.about_content_top{
+			h1{
+				font-size:$font_size_24;
+				color:$color_black;
+				text-transform:uppercase;
+				margin:0;
+			}
+		}
+		.about_content_bottom{
+			padding-top: 10px;
+			p{
+				font-size:$font_size_14;
+				color:$color_gray_news;
+			}
+		}
+	}
+}

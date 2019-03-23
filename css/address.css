@@ -1,0 +1,256 @@
+.button_page, form .login_button a, .address_tools button {
+  display: inline-block;
+  justify-content: center;
+  background-color: #000000;
+  text-align: center;
+  margin-top: 16px;
+  padding-top: 5px;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 12px;
+  float: left;
+  padding: 20px 43px; }
+
+* {
+  font-family: times new roman; }
+
+header .header_nav {
+  position: absolute;
+  width: 100%;
+  background-image: url(../img/bg-header.png); }
+  header .header_nav .header_nav_left ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around; }
+    header .header_nav .header_nav_left ul li {
+      padding-top: 7px;
+      padding-bottom: 5px; }
+      header .header_nav .header_nav_left ul li a {
+        color: #d6d6d6;
+        text-decoration: none;
+        font-size: 12px;
+        font-family: times new roman; }
+  header .header_nav .header_nav_right form {
+    width: 100%;
+    padding-top: 7px;
+    padding-bottom: 5px; }
+    header .header_nav .header_nav_right form input[type='text'] {
+      width: 74.999999%;
+      background-color: rgba(0, 0, 0, 0);
+      border: none;
+      border-left: 1px solid white; }
+    header .header_nav .header_nav_right form button {
+      width: 24.999999%;
+      background-color: rgba(0, 0, 0, 0);
+      border: none;
+      color: white; }
+header .header_banner {
+  width: 100%; }
+  header .header_banner img {
+    width: 100%;
+    height: 664px; }
+
+header .header_nav {
+  position: unset !important; }
+
+menu {
+  background-color: #000000;
+  height: 160px;
+  padding: 0;
+  margin: 0; }
+  menu .menu-right {
+    padding-top: 75px; }
+    menu .menu-right .menu-right-dropdown {
+      display: flex;
+      text-transform: uppercase;
+      font-size: 13px;
+      font-family: "Times New Roman";
+      justify-content: space-around;
+      list-style-type: none;
+      width: 893px; }
+      menu .menu-right .menu-right-dropdown li a {
+        color: white;
+        text-decoration: none; }
+  menu .menu-left {
+    padding-top: 14px; }
+
+menu .menu-right ul li.dropdown {
+  position: relative; }
+  menu .menu-right ul li.dropdown .menu-dropdown {
+    opacity: 0;
+    position: absolute;
+    z-index: 2;
+    display: flex;
+    background-color: #ffffff;
+    width: 948px;
+    height: 271px;
+    transform: translate(-18%, 64%);
+    transition: 1s all ease;
+    text-transform: none;
+    border: 1px solid #e6ae48; }
+    menu .menu-right ul li.dropdown .menu-dropdown i {
+      position: absolute;
+      left: 22%;
+      color: orange;
+      top: -9px;
+      transition: 1s all ease;
+      transform: translate(-18%, 64%);
+      opacity: 0; }
+    menu .menu-right ul li.dropdown .menu-dropdown .sub_item {
+      list-style-type: none;
+      padding-left: 36px;
+      line-height: 29px; }
+      menu .menu-right ul li.dropdown .menu-dropdown .sub_item li a {
+        color: #737373;
+        text-decoration: none; }
+    menu .menu-right ul li.dropdown .menu-dropdown h3 {
+      font-size: 14.15px;
+      padding-left: 36px;
+      color: #000000;
+      padding-top: 16px; }
+    menu .menu-right ul li.dropdown .menu-dropdown .image_menu {
+      padding-left: 8%;
+      padding-top: 2%; }
+      menu .menu-right ul li.dropdown .menu-dropdown .image_menu img {
+        width: 327px;
+        height: 210px; }
+
+menu .menu-right ul .dropdown:hover .menu-dropdown {
+  opacity: 1;
+  transform: translate(-18%, 24%); }
+menu .menu-right ul .dropdown:hover .menu-dropdown > i {
+  opacity: 1;
+  transform: translate(-18%, -4%); }
+
+menu .image_menu img {
+  padding-top: 17px; }
+
+.main_top {
+  padding-top: 31px; }
+  .main_top a {
+    color: #818181; }
+
+.new_product {
+  padding-top: 12px; }
+  .new_product .new_product_intro h1 {
+    font-size: 24px;
+    color: #000000; }
+
+footer {
+  padding-top: 100px; }
+
+.footer_top .adv {
+  background-image: url(../img/footer-header.png);
+  background-repeat: no-repeat;
+  height: 167px; }
+
+.footer_middle {
+  padding-top: 56px;
+  padding-bottom: 35px; }
+  .footer_middle h3 {
+    font-size: 18px;
+    font-family: times new roman;
+    letter-spacing: 3px; }
+  .footer_middle ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0; }
+    .footer_middle ul li a {
+      text-decoration: none;
+      color: #bcbcbc; }
+
+.footer_middle p {
+  color: #bcbcbc; }
+.footer_middle form {
+  height: 30px; }
+  .footer_middle form input {
+    width: 245px;
+    padding-left: 18px;
+    float: left;
+    height: 100%; }
+  .footer_middle form button {
+    clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+    background: black;
+    width: 74px;
+    border: none;
+    height: 100%; }
+    .footer_middle form button label {
+      color: #ffffff;
+      pointer-events: none;
+      padding-right: 8px;
+      margin: 0 auto; }
+
+.footer_middle_icon {
+  padding-top: 40px; }
+  .footer_middle_icon a {
+    padding-right: 10px;
+    color: #bcbcbc; }
+
+.footer_middle_contact i {
+  line-height: 30px;
+  font-weight: none;
+  color: #8b8b8b; }
+.footer_middle_contact i.fas.fa-blender-phone {
+  width: 34%; }
+
+.footer_bottom {
+  border-top: 1px solid #bcbcbc;
+  padding-top: 18px; }
+  .footer_bottom .footer_bottom_left {
+    width: 70%;
+    float: left;
+    color: #bcbcbc; }
+
+form {
+  padding: 50px; }
+  form .login_user {
+    margin: 0;
+    padding-top: 28px; }
+  form .login_label label {
+    width: 100%; }
+  form .login_input input[type=text], form .login_input input[type=password] {
+    padding: 8px;
+    width: 100%; }
+  form .forget_pass {
+    padding: 12px; }
+    form .forget_pass .forget_pass_check span {
+      padding-left: 10px; }
+
+form {
+  padding: 0; }
+
+.address_add a {
+  color: #24c5d9; }
+
+.address_form {
+  padding: 0; }
+
+.address_check {
+  padding: 10px; }
+  .address_check span {
+    padding-left: 13px; }
+
+.address_tools {
+  padding: 15px; }
+  .address_tools button {
+    font-size: 14.15px;
+    padding: 15px 36px;
+    margin-right: 15px; }
+  .address_tools .config {
+    background-color: #24c5d9; }
+
+.address_field .login_input input[type=text], .address_field .login_input input[type=password] {
+  border: none !important; }
+
+.address_field {
+  padding-top: 50px; }
+  .address_field .address_form {
+    border-top: 1px solid #d6d6d6; }
+
+form .login_label label {
+  padding-top: 7px; }
+
+.form_address_config {
+  float: right; }
+
+/*# sourceMappingURL=address.css.map */

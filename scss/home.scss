@@ -135,27 +135,8 @@
 		}
 	}
 }
-.news_blog_customer{
 
-	.news_item{
-		padding-top: 43px;
-		h3{
-			font-size:$font_size_bottom_h3;
-		}
-		h6{
-			font-size:$font_size_header;
-			color: $color_gray_news_h6;
-		}
-		p{
-			font-size:$font_size_header;
-			color: $color_gray_news;
-		}
-		h5{
-			font-size:$font_size_header;
-			color: $color_gray_news_h6;	
-		}		
-	}
-}
+@import "include/product_info.scss";
 
 .customer{
 	.customer_info{

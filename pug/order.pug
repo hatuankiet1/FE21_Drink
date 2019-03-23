@@ -1,0 +1,58 @@
+doctype html
+html
+	include include/head.pug
+	link(rel='stylesheet' type='text/css' href='../css/order.css')
+	body
+		include mixin/mixin.pug
+		include variables/variable.pug
+
+		header.clearfix
+			include include/account.pug
+
+		include include/menu.pug
+
+		main
+			.container
+				+redirect
+				+introduce_arrow("ĐƠN HÀNG")
+				.row
+					.col-md-9
+						.row.table_top
+							p DANH SÁCH ĐƠN HÀNG
+						.row.table_middle
+							each value in order_table_middle
+								a(href="#")= value
+						.row.table_bottom
+							table
+								thead
+									tr
+										each value in order_table_bottom_th
+											th= value
+								tbody
+									-for(var i=0;i<7;i++)
+										each value in order_table_bottom_td
+											tr
+												td= '0'+ i
+												td= value["2"]
+												td= value["3"]
+												td= value["4"]
+												td= value["5"]
+												td= value["6"]
+												td= value["7"]
+
+					.col-md-3
+						.row
+							.table_right
+								h4 THÔNG TIN KHÁCH HÀNG
+								-for(var i =0;i<table_right.length;i++)
+									.row.table_right_item
+										.col-md-1
+											i(class=table_right[i]["class"])
+										.col-md-9=table_right[i]["name"]
+								p Chi tiết địa chỉ
+											
+											
+												
+
+
+		include include/footer.pug							

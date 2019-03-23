@@ -1,0 +1,32 @@
+doctype html
+html
+	include include/head.pug
+	link(rel='stylesheet' type='text/css' href='../css/cart.css')
+	body
+		include mixin/mixin.pug
+		include variables/variable.pug
+
+		header.clearfix
+			include include/account.pug
+
+		include include/menu.pug
+
+		main
+			.container
+				+redirect
+				+introduce_arrow("GIỎ HÀNG")
+
+				.row.table_item
+					table.table-bordered
+						thead
+							tr
+								each value in cart_table_item
+									th= value
+						tbody
+							-for(var i= 0; i<cart_table_td.length;i++)
+								+cart_table_item(cart_table_td[i]["img"],cart_table_td[i]["name"],cart_table_td[i]["price"],cart_table_td[i]["amount"],cart_table_td[i]["total"] )
+				.row.paid
+					each value in cart_paid
+						a(href="#")= value
+
+		include include/footer.pug							

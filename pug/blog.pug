@@ -1,0 +1,23 @@
+doctype html
+html
+	include include/head.pug
+	link(rel='stylesheet' type='text/css' href='../css/blog.css')
+	body
+		include mixin/mixin.pug
+		include variables/variable.pug
+
+		header.clearfix
+			include include/account.pug
+
+		include include/menu.pug
+
+		main
+			.container
+				+redirect
+				+introduce_arrow("BLOG")
+				.row.product_list
+					each value in product_info
+						.col-lg-4
+							+product_info(value)
+
+		include include/footer.pug							

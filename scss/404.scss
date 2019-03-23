@@ -1,0 +1,49 @@
+@import "variables/colors.scss";
+@import "variables/fontSize.scss";
+@import "variables/fontStyle.scss";
+*{
+	font-family: times new roman;
+}
+
+body{
+	position:absolute;
+	background-image:url(../img/bg_404.png);
+	background-cover:cover;
+	background-repeat: no-repeat;
+}
+ul{
+	display:inline;
+	li{
+		display:inline;
+		padding-right: 33px;
+		a{
+			color:$color_black;
+			font-family:$font_style_open_san;
+			i{
+				padding-left: 2px;
+			}
+		}
+	}
+}
+.redirect_404{
+	position: absolute;
+  left: 38%;
+  padding-top: 40%;
+	width: 60%;
+}
+.box{
+	padding-top: 7%;
+	.box_search{
+		width: 80%;
+		border:1px solid $color_gray;
+		i{
+			padding: 8px 0;
+    	padding-left: 4%;
+    	cursor:pointer;
+    	padding-left: 2px;
+		}
+		input{
+			border: none;
+		}
+	}
+}

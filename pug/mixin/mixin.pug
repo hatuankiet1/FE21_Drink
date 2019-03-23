@@ -35,7 +35,11 @@ mixin introduce(title)
 			h1= title
 			img(src='../img/title-dark.png').
 
-
+mixin introduce_arrow(title)
+	.new_product.clearfix
+		.new_product_intro
+			h1= title
+			img(src='../img/titleleft-dark.png').
 mixin title(info)
 	.adv_item_in_right
 		h3 RƯỢU NHO NĂM 1987
@@ -51,5 +55,133 @@ mixin title(info)
 					.col-lg-6.row_up_item
 						h1=row_up[i]["h1"]
 						p=row_up[i]["p"]						
+
+mixin redirect
+	.row.main_top
+		-for(var i=0;i<redirect.length;i++)
+			a(href=redirect[i]["href"])=redirect[i]["name"] +'/'
+
+mixin redirect_page(value1,content1,value2,content3,value3)
+	.row.main_top
+			a(href="#")= value1 + '/'
+			if content1
+				a(href="#")= value2 + '/'
+			else
+				a(href="#")= value2	
+			if content3
+				a(href="#")= value3
+
+mixin title_menu(info,title)
+	.adv_item_in_right
+		h3= title
+		.arrow
+			img(src='../img/titleleft-dark.png')
+		if info
+			h2 330.000
+			<sup>đ<sup>
+			a(href="#") ADD TO CART
+			p #{adv_paragraph}
+			.row_up
+				-for(var i =0;i<row_up.length;i++ )
+					.col-lg-6.row_up_item
+						h1=row_up[i]["h1"]
+						p=row_up[i]["p"]
+
+
+mixin menu_list_item(h3,list)
+	h4=h3
+		ul
+			-for(var i=0;i<list.length;i++)
+				li(class=list[i]["class"])
+					a(href='#')=list[i]["name"]
+
+mixin product_list(src)
+	.new_prodct_main_item
+		.col-lg-4.img_product
+			img(src=src)
+		.col-lg-8
+			h3 RƯỢU NHO NĂM 1987
+			.row.price 330.000
+				sup đ
+			.row
+				p #{mota}	
+			.row.item
+				.col-lg-3
+					a(href="#") ADD TO CART
+				.col-lg-9.informore
+					-for(var i=0;i<more_i_column.length;i++)
+						i(class=more_i_column[i]["class"])=more_i_column[i]["name"]
+
+mixin cart_table_item(img,name,price,amount,total)
+	tr 
+		td
+			img(src=img)
+		td
+			h5=name
+		td 
+			p=price
+		td 
+			h5=amount
+		td
+			p=total
+		td 
+			i.fas.fa-trash-alt.	
+
+mixin product_info(value)
+	.news_item
+		img(src= value)
+		h3 VANG THĂNG LONG CLASSIC
+		h6 Đăng bởi HaKiet| 03/18/2019| 60 Bình luận
+		p #{news_paragraph}
+		h5 Readmore
+mixin form(label,type)
+	.row.login_user
+		.col-md-2.login_label
+			label= label
+		.col-md-10.login_input
+			input(type=type).	
+mixin detail_product
+	.news_item
+		img(src='../img/detail-blog-5.jpg')
+		h3 VANG THĂNG LONG CLASSIC
+		h6 Đăng bởi HaKiet| 03/18/2019| 60 Bình luận
+		p #{news_paragraph} #{news_paragraph}	
+
+mixin keyword
+	.row.keyword
+		-for(var i=0;i<keyword_top.length;i++)
+			a(class=keyword_top[i]["class"])=keyword_top[i]["name"]
+	.row.keyword
+		-for(var i=0;i<keyword_middle.length;i++)
+			a(class=keyword_middle[i]["class"])=keyword_middle[i]["name"]
+	.row.keyword
+		-for(var i=0;i<keyword_bottom.length;i++)
+			a(class=keyword_bottom[i]["class"])=keyword_bottom[i]["name"]
+
+mixin form_address(label,type,value)
+	.row.login_user
+		.col-md-2.login_label
+			label= label
+		.col-md-10.login_input
+			input(type=type value=value).	
+
+mixin address_form(info,address_field)
+	.col-md-6.address_form
+		form
+			-for(var i=0;i<login_user.length;i++)
+				+form_address(login_user[i]["label"],login_user[i]["type"],login_user[i]["value"])
+			if address_field
+				.row.form_address_config
+					a(href="#") Chỉnh sửa địa chỉ
+		if info		
+			.row.col-md-offset-2.address_check
+				input(type='checkbox' checked)
+				span Đặt làm địa chỉ mặc định
+			.row
+				.col-md-10.col-md-offset-2.address_tools
+					button.config(type='button') Chỉnh sửa địa chỉ
+					span
+						button(type='button') Xóa
+
 
 

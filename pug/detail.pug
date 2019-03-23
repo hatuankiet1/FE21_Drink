@@ -13,9 +13,7 @@ html
 
 		main
 			.container
-				.row.main_top
-					-for(var i=0;i<redirect.length;i++)
-						a(href=redirect[i]["href"])=redirect[i]["name"] +'/'
+				+redirect
 				.row.main_middle
 					.col-lg-1
 						.row.list_item
@@ -77,5 +75,8 @@ html
 								img(src='../img/home-6.jpg')
 								h3 RƯỢU NHO	
 
+				.row
+					+product_adv("SẢN PHẨM LIÊN QUAN")
 
 
+		include include/footer.pug	

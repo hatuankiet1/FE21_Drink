@@ -1,0 +1,28 @@
+doctype html
+html
+	include include/head.pug
+	link(rel='stylesheet' type='text/css' href='../css/about.css')
+	body
+		include mixin/mixin.pug
+		include variables/variable.pug
+
+		header.clearfix
+			include include/account.pug
+
+		include include/menu.pug
+
+		main
+			.container
+				+redirect
+				+introduce_arrow("GIỚI THIỆU")
+				.row.about
+					.col-lg-5.about_image
+						img(src='../img/adv-img.jpg')
+					.col-lg-6.about_content
+						.row.about_content_top
+							h1 #{about_title}
+						.row.about_content_bottom
+							p #{about_content_top}
+							p #{about_content_bottom}
+
+		include include/footer.pug							

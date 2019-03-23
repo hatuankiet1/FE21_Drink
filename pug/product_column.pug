@@ -1,0 +1,53 @@
+doctype html
+html
+	include include/head.pug
+	link(rel='stylesheet' type='text/css' href='../css/product_column.css')
+	body
+		include mixin/mixin.pug
+		include variables/variable.pug
+
+		header.clearfix
+			include include/account.pug
+
+		include include/menu.pug
+
+		main
+			.container
+				+redirect
+				.row.slide
+					img(src='../img/slide-1.jpg').	
+				.row.main_product
+					.col-lg-3
+						+title_menu(false,"DANH MỤC SẢN PHẨM")
+						.row.menu_list
+							+menu_list_item("RƯỢU NGOẠI",product_list_ruou_ngoai)
+							+menu_list_item("RƯỢU VANG",product_list_ruou_vang)
+						+title_menu(false,"SO SÁNH SẢN PHẨM")
+						p Bạn chưa có sản phẩm nào để so sánh
+						+title_menu(false,"TAG SẢN PHẨM")
+						.row.keyword
+							-for(var i=0;i<keyword_top.length;i++)
+								a(class=keyword_top[i]["class"])=keyword_top[i]["name"]
+						.row.keyword
+							-for(var i=0;i<keyword_middle.length;i++)
+								a(class=keyword_middle[i]["class"])=keyword_middle[i]["name"]
+						.row.keyword
+							-for(var i=0;i<keyword_bottom.length;i++)
+								a(class=keyword_bottom[i]["class"])=keyword_bottom[i]["name"]
+						.row.advertise
+							img(src='../img/advertise.jpg').					
+					.col-lg-9.main_item
+						.row.main_item_top
+							.col-lg-9.main_item_left
+								each value in product_a
+									a(href="#")
+										i(class=value).
+							.col-lg-3.main_item_right
+								i.fas.fa-caret-left
+								-for(var i = 0;i<6;i++)
+									a(href="#")=i
+								i.fas.fa-caret-right
+						.row.main_item_bottom
+							each value in product_column_list
+								+product_list(value)
+		include include/footer.pug							

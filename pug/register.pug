@@ -1,0 +1,36 @@
+doctype html
+html
+	include include/head.pug
+	link(rel='stylesheet' type='text/css' href='../css/register.css')
+	body
+		include mixin/mixin.pug
+		include variables/variable.pug
+
+		header.clearfix
+			include include/account.pug
+
+		include include/menu.pug
+
+		main
+			.container
+				+redirect
+				+introduce_arrow("ĐĂNG NHẬP")
+				.register
+					a(href="#") ĐĂNG KÝ
+				.row.login
+					form
+						h3 THÔNG TIN CÁ NHÂN
+						-for(var i=0;i<register_user.length;i++)
+							+form(register_user[i]["label"],register_user[i]["type"])
+						.row.forget_pass
+							.col-md-2.col-md-offset-2.forget_pass_check
+								input(type='checkbox' required)
+								span Đăng ký nhận bản tin
+						h3 THÔNG TIN ĐĂNG NHẬP
+						-for(var i=0;i<register_login.length;i++)
+							+form(register_login[i]["label"],register_login[i]["type"]).
+						.row.send
+							each value in register_send
+								a(href="#")= value
+
+		include include/footer.pug							

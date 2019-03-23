@@ -1,0 +1,16 @@
+.keyword_item{
+	font-size: $font_size_header;
+	font-family: $font_style_open_san;
+	padding: 5px 7px;
+  border: 1px solid $color_gray;
+  margin-right: 11px;
+  text-decoration: none!important;
+  color: $color_black;
+  &:hover{
+  	background-color:$color_orange;
+  	color:$color_white;
+  }
+}
+.keyword{
+	padding: 23px 0;
+}

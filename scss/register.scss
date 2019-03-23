@@ -1,0 +1,42 @@
+@import "variables/colors.scss";
+@import "variables/fontSize.scss";
+@import "variables/fontStyle.scss";
+@import "include/button_page.scss";
+
+*{
+	font-family: times new roman;
+}
+@import "include/account.scss";
+header .header_nav{
+	position: unset!important;
+}
+@import "include/menu.scss";
+@import "include/introduce_arrow.scss";
+@import "include/footer.scss";
+.register{
+	float:right;
+  transform: translate($position_right,$position_right);
+	a{
+		@extend .button_page
+	}
+}
+.login{
+	h3{
+		font-size:$font_size_18;
+	}
+	p{
+		font-size:$font_size_14;
+	}
+	border: 1px solid gray;
+  transform: translateY(60px);
+	margin:0;
+}
+.send{
+	float: right;
+	a{
+		@extend .button_page;
+		padding: 5px 21px;
+    margin-right: 19px;
+	}
+}
+@import "include/form.scss";

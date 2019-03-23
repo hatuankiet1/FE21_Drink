@@ -11,13 +11,7 @@ header .header_nav{
 	position: unset!important;
 }
 @import "include/menu.scss";
-.main_top{
-	padding-top: 31px;
-	a{
-		color:$color_gray_news;
 
-	}
-}
 .row.main_middle{
 	padding-top: 54px;
 }
@@ -68,8 +62,8 @@ header .header_nav{
 }
 .red{
 	background-color:$color_red;
-	width:28px;
-	height:28px;
+	width: $font_size_28;
+	height: $font_size_28;
 	display: inline-block;
 }
 .colorful{
@@ -107,9 +101,9 @@ header .header_nav{
 	    background-color: $color_gray;
 	}
 	p{
-		display:inline-block;
-		padding: 2px 42px;
-   		border: 3px solid #d6d6d6;
+		display: inline-block;
+	    padding: 5px 42px;
+	    border: 2px solid #d6d6d6;
 	}
 
 }
@@ -160,6 +154,10 @@ header .header_nav{
 	}
 	h3{
 		position: absolute;
-    	transform: translate(89%,230%);
+	    transform: translate(36%, 134%);
+	    font-size: $font_size_42;
+    	color:$color_white;
 	}
 }
+@import "include/product.scss";
+@import "include/footer.scss";

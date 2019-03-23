@@ -3,7 +3,7 @@ html
 	include include/head.pug
 	link(rel='stylesheet' type='text/css' href='../css/home.css')
 	body
-		include mixin/mixin_footer.pug
+		include mixin/mixin.pug
 		include variables/variable.pug
 
 		header.clearfix
@@ -60,12 +60,13 @@ html
 						.col-lg-8
 							+introduce("TIN TỨC & BLOG")
 							each value in news_blog_customer
-								.col-lg-6.news_item
-									img(src= value)
-									h3 VANG THĂNG LONG CLASSIC
-									h6 Đăng bởi HaKiet| 03/18/2019| 60 Bình luận
-									p #{news_paragraph}
-									h5 Readmore 
+								.col-lg-6
+									.news_item
+										img(src= value)
+										h3 VANG THĂNG LONG CLASSIC
+										h6 Đăng bởi HaKiet| 03/18/2019| 60 Bình luận
+										p #{news_paragraph}
+										h5 Readmore 
 
 						.col-lg-4.customer
 							+introduce("TIN TỨC & BLOG")

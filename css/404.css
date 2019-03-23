@@ -1,0 +1,40 @@
+* {
+  font-family: times new roman; }
+
+body {
+  position: absolute;
+  background-image: url(../img/bg_404.png);
+  background-cover: cover;
+  background-repeat: no-repeat; }
+
+ul {
+  display: inline; }
+  ul li {
+    display: inline;
+    padding-right: 33px; }
+    ul li a {
+      color: #000000;
+      font-family: Open Sans; }
+      ul li a i {
+        padding-left: 2px; }
+
+.redirect_404 {
+  position: absolute;
+  left: 38%;
+  padding-top: 40%;
+  width: 60%; }
+
+.box {
+  padding-top: 7%; }
+  .box .box_search {
+    width: 80%;
+    border: 1px solid #d6d6d6; }
+    .box .box_search i {
+      padding: 8px 0;
+      padding-left: 4%;
+      cursor: pointer;
+      padding-left: 2px; }
+    .box .box_search input {
+      border: none; }
+
+/*# sourceMappingURL=404.css.map */

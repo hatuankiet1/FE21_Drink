@@ -1,0 +1,59 @@
+@import "variables/colors.scss";
+@import "variables/fontSize.scss";
+@import "variables/fontStyle.scss";
+*{
+	font-family: times new roman;
+}
+@import "include/account.scss";
+header .header_nav{
+	position: unset!important;
+}
+@import "include/menu.scss";
+@import "include/introduce_arrow.scss";
+@import "include/footer.scss";
+.table_item{
+	padding-top:40px;
+}
+table{
+	width: 100%;
+	text-align: center;
+	background-color:$color_gray;
+	padding-top:30px;
+	th{
+		text-align: center;
+		font-size:$font_size_14;
+		padding: 20px 0;
+	}
+	td{
+		font-size:$font_size_13;
+		padding: 35px 0px;
+		p{
+			font-size:$font_size_16;
+			color:$color_orange;
+			font-family: $font_style_caviar;
+		}
+		img{
+			  width: 144px;
+   			height: 212px;
+		}
+		i{
+			font-size:$font_size_16;
+		}
+	}
+}
+.paid{
+	padding-top: 30px;
+  float: right;
+	a{
+		display: inline-block;
+    justify-content: center;
+    background-color: $color_black;
+    text-align: center;
+    padding: 9px 19px;
+    text-decoration: none;
+    color: $color_white;
+    height: 31px;
+    font-size: $font_size_header;
+    margin-left: 26px;
+	}
+}

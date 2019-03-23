@@ -1,0 +1,41 @@
+doctype html
+html
+	include include/head.pug
+	link(rel='stylesheet' type='text/css' href='../css/contact.css')
+	body
+		include mixin/mixin.pug
+		include variables/variable.pug
+
+		header.clearfix
+			include include/account.pug
+
+		include include/menu.pug
+
+		main
+			.container
+				+redirect_page("Trang Chủ",false,"Địa Chỉ",false,a)
+				+introduce_arrow("LIÊN HỆ")
+				.row
+					.col-md-8
+						each value in map
+							iframe(src= value["map"] width= value["width"] height= value["height"] style= value["style"] allowfullscreen )
+					.col-md-3.contact
+						.row.contact_info
+							img(src='../img/logo-light.jpg')
+						-for(var i=0;i<contact_info.length;i++)
+							.row.contact_info_relative
+								i(class=contact_info[i]["class"])
+								span= contact_info[i]["name"]
+						.row.contact_social
+							p FOLLOW US
+							.contact_social_item
+								each value in contact_social
+									i(class=value) 
+				.row
+					.col-md-8
+						each value in contact_form
+							+form(value,'text')
+						.col-md-2.col-md-offset-2.contact_send
+							a(href="#") Gửi	
+
+		include include/footer.pug						

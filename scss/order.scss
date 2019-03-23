@@ -1,0 +1,66 @@
+@import "variables/colors.scss";
+@import "variables/fontSize.scss";
+@import "variables/fontStyle.scss";
+@import "include/button_page.scss";
+*{
+	font-family: times new roman;
+}
+@import "include/account.scss";
+header .header_nav{
+	position: unset!important;
+}
+@import "include/menu.scss";
+@import "include/introduce_arrow.scss";
+@import "include/footer.scss";
+.table_top{
+	background-color:$color_table;
+  padding: $padding_20 $padding_20;
+  width: 99%;
+	p{
+		font-size:$font_size_16;
+	}
+}
+.table_middle{
+	background-color: $color_table;
+  padding: 0px 20px;
+  width: 99%;
+  padding-bottom: 49px;
+  padding-top: 0px;
+
+	a{
+		font-size:$font_size_14;
+		padding-right:10px;
+		text-decoration: none;
+		color:$color_black;
+	}
+}
+.table_bottom{
+	padding:0;
+	width: 99%;
+	table{
+		width: 100%;
+		th{
+			text-align: center;
+	    font-size: $font_size_14;
+	    border: 1px solid $color_table;
+	    padding: 10.5px;
+		}
+		td{
+			text-align: center;
+			padding: 10px;
+		}
+	}
+}
+.table_right{
+	padding:$padding_20 $padding_20;
+	background-color:$color_table;
+	h4{
+		margin:0;
+	}
+	.table_right_item{
+		padding-top:$padding_24;
+	}
+	p{
+		padding-top:$padding_24;
+	}
+}

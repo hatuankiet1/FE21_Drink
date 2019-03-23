@@ -1,0 +1,34 @@
+form{
+	padding: 50px;
+}
+.login_user{
+	margin:0;
+	padding-top: 28px;
+}
+.login_label{
+	label{
+		width:100%;
+	}
+}
+.login_input{
+	input[type=text],input[type=password]{
+		padding: 8px;
+		width:100%;
+	}
+	input[type=textarea]{
+		height:160px;
+	}
+}
+.forget_pass{
+	padding: 12px;
+	.forget_pass_check{
+		span{
+			padding-left: 10px;
+		}
+	}
+}
+.login_button{
+	a{
+		@extend .button_page;
+	}
+}

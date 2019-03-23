@@ -1,0 +1,29 @@
+doctype html
+html
+	include include/head.pug
+	link(rel='stylesheet' type='text/css' href='../css/404.css')
+	body
+		include mixin/mixin.pug
+		include variables/variable.pug
+		.container
+			.row.redirect_404
+				.col-md-7
+					img(src='../img/logo_404.png')
+					ul
+						li 
+							a
+								|Trang Chu
+								i.fas.fa-caret-right
+						li
+							a
+								|Lien He
+								i.fas.fa-caret-right
+				.col-md-5.box
+						.box_search
+							i.fas.fa-search
+							input(type='text').		
+
+
+			
+				
+						

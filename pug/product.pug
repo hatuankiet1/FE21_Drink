@@ -1,0 +1,47 @@
+doctype html
+html
+	include include/head.pug
+	link(rel='stylesheet' type='text/css' href='../css/product.css')
+	body
+		include mixin/mixin.pug
+		include variables/variable.pug
+
+		header.clearfix
+			include include/account.pug
+
+		include include/menu.pug
+
+		main
+			.container
+				+redirect
+				.row.slide
+					img(src='../img/slide-1.jpg').	
+				.row.main_product
+					.col-lg-3
+						+title_menu(false,"DANH MỤC SẢN PHẨM")
+						.row.menu_list
+							+menu_list_item("RƯỢU NGOẠI",product_list_ruou_ngoai)
+							+menu_list_item("RƯỢU VANG",product_list_ruou_vang)
+						+title_menu(false,"SO SÁNH SẢN PHẨM")
+						p Bạn chưa có sản phẩm nào để so sánh
+						+title_menu(false,"TAG SẢN PHẨM")
+						+keyword
+						.row.advertise
+							img(src='../img/advertise.jpg').					
+					.col-lg-9.main_item
+						.row.main_item_top
+							.col-lg-9.main_item_left
+								each value in product_a
+									a(href="#")
+										i(class=value).
+							.col-lg-3.main_item_right
+								i.fas.fa-caret-left
+								-for(var i = 0;i<6;i++)
+									a(href="#")=i
+								i.fas.fa-caret-right
+						.row.main_item_bottom
+							-for(var i=0;i<product_main_list.length;i++)
+								.col-lg-4.main_item_bottom_list
+									+product(product_main_list[i]["img"],product_main_list[i]["price_left"],product_main_list[i]["price_right"]).	
+
+		include include/footer.pug							

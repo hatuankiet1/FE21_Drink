@@ -1,0 +1,19 @@
+.news_item{
+	padding-top: 43px;
+	h3{
+		font-size:$font_size_30;
+	}
+	h6{
+		font-size:$font_size_21;
+		color: $color_gray_news_h6;
+	}
+	p{
+		font-size:$font_size_19;
+		color: $color_gray_news;
+		font-style:italic;
+	}
+	h5{
+		font-size:$font_size_header;
+		color: $color_gray_news_h6;	
+	}		
+}

@@ -1,0 +1,58 @@
+@import "variables/colors.scss";
+@import "variables/fontSize.scss";
+@import "variables/fontStyle.scss";
+@import "include/button_page.scss";
+*{
+	font-family: times new roman;
+}
+@import "include/account.scss";
+header .header_nav{
+	position: unset!important;
+}
+@import "include/menu.scss";
+@import "include/introduce_arrow.scss";
+@import "include/footer.scss";
+@import "include/form.scss";
+.contact{
+	line-height: 33px;
+}
+.contact_info{
+	padding-bottom: 20px;
+}
+.contact_info_relative{
+	padding-top:10px;
+	i{
+		color:$color_666666;
+	}
+	span{
+		color:$color_666666;
+		font-size: $font_size_14_04;
+		padding-left:10px;	
+	}
+}
+.contact_social{
+	padding-top:10px;
+	p{
+		font-size:$font_size_18;
+	}
+	.contact_social_item{
+		i{
+			padding-right:10px;
+			font-size:$font_size_16;
+			color:$color_666666;
+		}
+	}
+}
+.login_input{
+	input[type=text],input[type=password]{
+		background-color: $color_fafafa;
+		border:1px solid $color_gray;
+	}
+}
+.contact_send{
+	a{
+		@extend .button_page;
+		font-size: $font_size_14;
+		padding: 9px 24px;
+	}
+}

@@ -1,0 +1,26 @@
+doctype html
+html
+	include include/head.pug
+	link(rel='stylesheet' type='text/css' href='../css/popup.css')
+	body
+		include mixin/mixin.pug
+		include variables/variable.pug
+
+		.row.popup
+			.row.popup_info
+				a(href="#")
+					i.far.fa-times-circle
+				.col-md-4.col-sm-4.col-xs-4.popup_info_img
+					img(src='../img/popup.png')
+				.col-md-8.col-sm-8.col-xs-8.popup_info_form
+					h1 Gửi Email
+					p #{popup_para}
+					.row.col-sm-12.popup_field.clearfix
+						input(type='text' placeholder='Email của bạn...')
+						button(type='button') GỬI EMAIL
+					.row.col-md-12.popup_check
+						input(type='checkbox')
+						span Không hiển thị lại thông báo này	
+								
+
+

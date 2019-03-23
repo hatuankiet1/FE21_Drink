@@ -1,0 +1,34 @@
+doctype html
+html
+	include include/head.pug
+	link(rel='stylesheet' type='text/css' href='../css/login.css')
+	body
+		include mixin/mixin.pug
+		include variables/variable.pug
+
+		header.clearfix
+			include include/account.pug
+
+		include include/menu.pug
+
+		main
+			.container
+				+redirect
+				+introduce_arrow("ĐĂNG NHẬP")
+				.register
+					a(href="#") ĐĂNG KÝ
+				.row.login
+					form
+						h3 KHÁCH HÀNG ĐĂNG NHẬP
+						p #{login_title}
+						-for(var i=0;i<login_user.length;i++)
+							+form(login_user[i]["label"],login_user[i]["type"])
+						.row.forget_pass
+							.col-md-2.col-md-offset-2.forget_pass_check
+								input(type='checkbox')
+								span Quên mật khẩu	
+						.row.login_button
+							.col-md-2.col-md-offset-2
+								a(href="#") ĐĂNG NHẬP	
+
+		include include/footer.pug							
