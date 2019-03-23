@@ -1,29 +1,46 @@
+@import "../mixin/responsive.scss";
+
 menu{
 	background-color: $color_black;
-	height:160px;
+	height:auto;
 	padding: 0;
-    margin: 0;
-	.menu-right{
-		padding-top: 75px;
+  margin: 0;
+  padding-bottom: 20px;
+	.menu{
+		display:flex;
+		flex-flow: row wrap;
+		text-align: center;
+		.menu-right{
+			padding-top: 75px;
+
+			@include Responsive(SM){
+				&{
+					padding-left: 50px;
+				}
+			}
+
 		.menu-right-dropdown{
 			display: flex;
-		    text-transform: uppercase;
-		    font-size: 13px;
-		    font-family: "Times New Roman";
-		    justify-content: space-around;
-		    list-style-type: none;
-		    width: 893px;
+	    font-size: 13px;
+	    font-family: "Times New Roman";
+	    justify-content: space-around;
+	    list-style-type: none;
+	    width: 100%;
+	    padding: 0;
 			li{
 				a{
 					color:white;
 					text-decoration:none;
-
 				}
 			}
 		}
+
+		
+
 	}
 	.menu-left{
 		padding-top: 14px;
+			}
 	}
 }
 

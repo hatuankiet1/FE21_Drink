@@ -39,24 +39,32 @@ header .header_banner {
 
 menu {
   background-color: #000000;
-  height: 160px;
+  height: auto;
   padding: 0;
-  margin: 0; }
-  menu .menu-right {
-    padding-top: 75px; }
-    menu .menu-right .menu-right-dropdown {
-      display: flex;
-      text-transform: uppercase;
-      font-size: 13px;
-      font-family: "Times New Roman";
-      justify-content: space-around;
-      list-style-type: none;
-      width: 893px; }
-      menu .menu-right .menu-right-dropdown li a {
-        color: white;
-        text-decoration: none; }
-  menu .menu-left {
-    padding-top: 14px; }
+  margin: 0;
+  padding-bottom: 20px; }
+  menu .menu {
+    display: flex;
+    flex-flow: row wrap;
+    text-align: center; }
+    menu .menu .menu-right {
+      padding-top: 75px; }
+      @media screen and (min-width: 768px) {
+        menu .menu .menu-right {
+          padding-left: 50px; } }
+      menu .menu .menu-right .menu-right-dropdown {
+        display: flex;
+        font-size: 13px;
+        font-family: "Times New Roman";
+        justify-content: space-around;
+        list-style-type: none;
+        width: 100%;
+        padding: 0; }
+        menu .menu .menu-right .menu-right-dropdown li a {
+          color: white;
+          text-decoration: none; }
+    menu .menu .menu-left {
+      padding-top: 14px; }
 
 menu .menu-right ul li.dropdown {
   position: relative; }
@@ -242,13 +250,14 @@ menu .image_menu img {
 .news_item {
   padding-top: 43px; }
   .news_item h3 {
-    font-size: 18px; }
+    font-size: 30px; }
   .news_item h6 {
-    font-size: 12px;
+    font-size: 21px;
     color: #c1c1c1; }
   .news_item p {
-    font-size: 12px;
-    color: #818181; }
+    font-size: 19px;
+    color: #818181;
+    font-style: italic; }
   .news_item h5 {
     font-size: 12px;
     color: #c1c1c1; }

@@ -1,27 +1,28 @@
-$XS:480px;
-$SM:768px;
-$MD:1024px;
-$LG:1200px;
+$LG:1200px;//thiết bị màn hình rộng
+$MD:1024px;//pc laptop
+$SM:768px;//table máy tính bảg
+$XS:480px;//điệnt hoại
 
 @mixin Responsive($A){
-	if $A == XS{
-		@media screen and (max-width:$XS){
+	@if $A == XS{
+		@media screen and (min-width:$XS){
 			@content;
 		}
 	}
-	esle if $A ==SM{
-		@media screen and (max-width:$SM){
+	@else if $A == SM{
+		@media screen and (min-width:$SM){
 			@content;
 		}
 	}
-	else if $A == MD{
-		@media screen and (max-width:$MD){
+	@else if $A == MD{
+		@media screen and (min-width:$MD){
 			@content;
 		}
 	}
-	else if $A == LG{
-		@media screen and (max-width:$LG){
+	@else if $A == LG{
+		@media screen and (min-width:$LG){
 			@content;
 		}
 	}
 }
+

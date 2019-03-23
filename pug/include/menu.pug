@@ -1,10 +1,10 @@
 menu.clearfix
 		.container
-			.row
+			.row.menu
 				.col-md-2.menu-left
 					img(src='../img/logo.png' alt='logo')
 
-				.col-md-10.menu-right
+				.col-md-10.col-xs-12.col-sm-12.menu-right
 					ul.menu-right-dropdown
 						li
 							a(href='#') TRANG CHỦ
@@ -24,6 +24,6 @@ menu.clearfix
 								.image_menu
 									img(src='../img/menu-info.jpg' alt='').
 
-						each value in ["Rượu Vang trắng","champagne","thông tin","blog","liên hệ"]
+						each value in ["RƯỢU VANG TRẮNG","CHAMPAGNE","THÔNG TIN","BLOG","LIÊN HỆ"]
 							li
 								a=value
